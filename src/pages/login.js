@@ -1,15 +1,17 @@
 //React Imports
-import { useState } from 'react'
+import React from 'react';
+import {useState} from 'react'
 
 // Helper
-import { handleChange } from "../cli/comand/handleHelper"
+import {handleChange} from "../cli/comand/handleHelper"
 
 // Ações da página de login
-import { handleSubmit } from "../cli/comand/handleLogin"
+import {handleSubmit} from "../cli/comand/handleLogin"
 
 // Componentes
 import Swal from "sweetalert2";
-import { useRouter } from 'next/router';
+import {useRouter} from 'next/router';
+
 
 const Login = () => {
 
@@ -51,21 +53,22 @@ const Login = () => {
         <>
             <div className="accountbg"></div>
             <div className="home-btn d-none d-sm-block">
-                <a href="index.html" className="text-white"><i className="fas fa-home h2"></i></a>
+                <a className="text-white">
+                    <i className="fas fa-home h2"></i>
+                </a>
             </div>
             <div className="wrapper-page">
                 <div className="card card-pages shadow-none">
-
                     <div className="card-body">
                         <div className="text-center m-t-0 m-b-15">
-                            <a href="index.html" className="logo logo-admin">
-                                <img src="/images/logo-light.png"
+                            <a className="logo logo-admin">
+                                <img src="/images/logo.svg"
                                      alt=""
-                                     height="24"
+                                     height="100"
                                 />
                             </a>
                         </div>
-                        <h5 className="font-18 text-center">Sign in to continue to Stexo.</h5>
+                        <h5 className="font-18 text-center">Realize o login no sistema.</h5>
 
                         <form className="form-horizontal m-t-30" onSubmit={submitForm}>
 
@@ -106,16 +109,6 @@ const Login = () => {
                                     </button>
                                 </div>
                             </div>
-
-                            <div className="form-group row m-t-30 m-b-0">
-                                <div className="col-sm-7">
-                                    <a href="pages-recoverpw.html" className="text-muted"><i
-                                        className="fa fa-lock m-r-5"></i> Forgot your password?</a>
-                                </div>
-                                <div className="col-sm-5 text-right">
-                                    <a href="pages-register.html" className="text-muted">Create an account</a>
-                                </div>
-                            </div>
                         </form>
                     </div>
 
@@ -124,13 +117,5 @@ const Login = () => {
         </>
     );
 }
-
-// const Login = () => {
-//     return (
-//         <>
-//             <p>AAAA</p>
-//         </>
-//     )
-// }
 
 export default Login;

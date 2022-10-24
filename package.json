@@ -8,9 +8,14 @@
     "start": "next start",
     "lint": "next lint",
     "sass:global": "node-sass .\\src\\styles\\scss\\style.scss .\\src\\styles\\global.css",
-    "sass:icon": "node-sass .\\src\\styles\\scss\\icons.scss .\\src\\styles\\icons.css"
+    "sass:icon": "node-sass .\\src\\styles\\scss\\icons.scss .\\src\\styles\\icons.css",
+    "sass:custom": "node-sass .\\src\\styles\\custom\\main.scss .\\src\\styles\\custom.css",
+    "test": "react-scripts test"
   },
   "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
     "crypto": "^1.0.1",
     "next": "12.3.1",
     "node-sass": "^7.0.3",
@@ -20,7 +25,12 @@
     "serverless-mysql": "^1.5.4",
     "sweetalert2": "^11.6.1",
     "timers": "^0.1.1",
-    "tls": "^0.0.1"
+    "tls": "^0.0.1",
+    "react-scripts": "3.4.1",
+    "eslint": "^6.6.0"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
   },
   "devDependencies": {
     "eslint": "8.26.0",

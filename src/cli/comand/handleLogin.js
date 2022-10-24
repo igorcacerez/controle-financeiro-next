@@ -16,9 +16,6 @@ const handleSubmit = async (values) => {
         // Tenta realizar o login
         await login(values.email, values.password)
             .then((e) => {
-                // Salva os dados em cache
-
-
                 resolve(e)
             })
             .catch((e) => {
